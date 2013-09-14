@@ -119,14 +119,14 @@ var SampleApp = function () {
 
             var MongoClient = require('mongodb').MongoClient;
             MongoClient.connect("mongodb://admin:nA8tR_dyNKnj@127.2.62.130:27017/alticrm", function (err, db) {
-                res.end('DB : '+ err);
-                /*
+                //res.end('DB : '+ err);
+                
                 var collection = db.collection("crm_data");
                 collection.find().toArray(function(err, item) {
                     res.write(JSON.stringify(item));
                     res.end();
                  });
-                   */
+                   
             });
        };
     };
