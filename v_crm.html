@@ -1,0 +1,118 @@
+ <div id="CRM">
+<h3>CRM (beta)</h3>
+<table class="table table-condensed table-striped">
+<thead>
+<tr>
+<td><input type="text" class="input-mini search-query" ng-model="query.FIELD1" placeholder="Req. #"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD5" placeholder="Request Raised by (Name)"> </td>
+<td><input type="text" class="input-mini search-query" ng-model="query.FIELD6" placeholder="ISU/HSU"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD7" placeholder="Account Name"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD8" placeholder="Opportunity Name"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD9" placeholder="Sales stage"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD10" placeholder="Opportunity Closure  Date"> </td>
+<td><input type="text" class="input-mini search-query" ng-model="query.FIELD11" placeholder="Win Probability"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD15" placeholder="Project Start Date"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD16" placeholder="Project Duration (months) "> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD17" placeholder="Billing Rate (Euro/Day)"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD18" placeholder="Key contact in BU  (Name)"> </td>
+<td><input type="text" class="input-medium search-query" ng-model="query.FIELD20" placeholder="Opportunity description"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD23" placeholder="Any Suitable Resource Internally"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD24" placeholder="Internal Consultant Name"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD26" placeholder="Sub contactor"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD27" placeholder="Role/title"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD28" placeholder="Main Technology"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD29" placeholder="Main Functional Skill"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD30" placeholder="Years of Experience"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD31" placeholder="Project Location"> </td>
+<td><input type="text" class="input-small search-query" ng-model="query.FIELD33" placeholder="Role Description"> </td>
+<td><input type="text" class="input-mini search-query" ng-model="query.FIELD38" placeholder="Number of applicant"> </td>
+
+</tr>
+<tr>
+<th>Req. #</th>
+<!-- <th>MONDAY MEETING?</th> 
+<th>Request Raised Date</th>
+<th>Last Updated  Date</th>  -->
+<th>Request Raised by (Name)</th>
+<th>ISU/HSU</th>
+<th>Account Name</th>
+<th>Opportunity Name</th>
+<th>Sales stage</th>
+<th>Opportunity Closure  Date</th>
+<th>Win Probability</th>
+<!-- <th>Type of Business (New or renewal of existing)</th>
+<th>Qualified</th> 
+<th>Project type</th>   -->
+<th>Project Start Date</th>
+<th>Project Duration (months) </th>
+<th>Billing Rate (Euro/Day)</th>
+<th>Key contact in BU  (Name)</th>
+<!-- <th>BU</th> -->
+<th>Opportunity description</th>
+<!-- <th>Challenges or Pain points</th>
+<th>BU</th> -->
+<th>Any Suitable Resource Internally</th>
+<th>Internal Consultant Name</th>
+<!-- <th>Recruitment?</th> -->
+<th>Sub contactor</th>
+<th>Role/title</th>
+<th>Main Technology</th>
+<th>Main Functional Skill</th>
+<th>Years of Experience</th>
+<th>Project Location</th>
+<!-- <th>Headcount (ETP) </th> -->
+<th>Role Description</th>
+<!-- <th>Includes MSA (Y/N)</th>
+<th>Main competitor</th>
+<th>Total revenue</th>
+<th>Weightage</th>        -->
+<th>Number of applicants</th>
+
+</tr>
+</thead>
+<tbody>
+<tr ng-repeat="need in needs | filter:query | orderBy: 'FIELD9'">  
+<td>
+<a href="javascript:window.open('#/rh/{{need.FIELD1}}','popup','resizable=no,scrollbars=yes,location=no,width=1000,height=500,top=200,left=200');">{{need.FIELD1}}</a></td>
+<!-- <td>{{need.FIELD2}}</td>
+<td>{{need.FIELD3}}</td>
+<td>{{need.FIELD4}}</td> -->
+<td>{{need.FIELD5}}</td>                                                                                                   
+<td>{{need.FIELD6}}</td>
+<td>{{need.FIELD7}}</td>    
+<td>{{need.FIELD8}}</td>
+<td>{{need.FIELD9}}</td>
+<td>{{need.FIELD10}}</td>
+<td>{{need.FIELD11}}</td>
+<!-- <td>{{need.FIELD12}}</td>
+<td>{{need.FIELD13}}</td>
+<td>{{need.FIELD14}}</td> -->
+<td>{{need.FIELD15}}</td>
+<td>{{need.FIELD16}}</td>
+<td>{{need.FIELD17}}</td>
+<td>{{need.FIELD18}}</td>
+<!-- <td>{{need.FIELD19}}</td> -->
+<td>{{need.FIELD20}}</td>
+<!-- <td>{{need.FIELD21}}</td>
+<td>{{need.FIELD22}}</td> -->
+<td>{{need.FIELD23}}</td>
+<td>{{need.FIELD24}}</td>
+<!-- <td>{{need.FIELD25}}</td> -->
+<td>{{need.FIELD26}}</td>
+<td>{{need.FIELD27}}</td>
+<td>{{need.FIELD28}}</td>
+<td>{{need.FIELD29}}</td>
+<td>{{need.FIELD30}}</td>
+<td>{{need.FIELD31}}</td>
+<!-- <td>{{need.FIELD32}}</td> -->
+<td>{{need.FIELD33}}</td>
+<!-- <td>{{need.FIELD34}}</td>
+<td>{{need.FIELD35}}</td>
+<td>{{need.FIELD36}}</td>
+<td>{{need.FIELD37}}</td> -->
+  <td>{{need.FIELD38}}</td>
+</tr>
+</tbody>
+</table> 
+
+</div>
