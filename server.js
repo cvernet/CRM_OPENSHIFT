@@ -3,7 +3,7 @@
 var express = require('express');
 var fs = require('fs');
 var url = require('url');
-
+var MongoClient = require('mongodb').MongoClient;
 
 /**
  *  Define the sample application.
@@ -113,6 +113,7 @@ var SampleApp = function () {
         self.routes['/insert/:id'] = function (req, res) {
             res.write('Ajout dans la base '+req.params.id);
 //insertion dans la base
+          MongoClient.connect("mongodb://admin:nA8tR_dyNKnj@127.2.62.130:27017/alticrm", function (err, db) {
                 collection.insert(
                 [
                 {
@@ -124,7 +125,8 @@ var SampleApp = function () {
                     w: 1
                 }, function (err, result) {
                  res.end('Erreur ? ' + err);   
-                    });            
+                    }); 
+            });                   
 
         };
 
@@ -135,7 +137,6 @@ var SampleApp = function () {
 
         self.routes['/ws'] = function (req, res) {
 //Lit les infos CRM présentes dans la base
-            var MongoClient = require('mongodb').MongoClient;
             MongoClient.connect("mongodb://admin:nA8tR_dyNKnj@127.2.62.130:27017/alticrm", function (err, db) {
                 //res.end('DB : '+ err);
                 
@@ -143,6 +144,7 @@ var SampleApp = function () {
                 collection.find().toArray(function(err, item) {
                     res.write(JSON.stringify(item));
                     res.end();
+                    
                  });
                    
             });
