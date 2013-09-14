@@ -15,14 +15,15 @@ function ($scope, $http, $routeParams) {
   
 if (localStorage['auth'] == 'crm_ok')  
     {
-      $http.get('crm.json').success(function(data) {
+//      $http.get('crm.json').success(function(data) {
+      $http.get('http://alticrm-cvernet.rhcloud.com/ws').success(function(data) {
       	$scope.needs = data;
       });    
       $scope.needs = [];
     }
 else
      {
-       window.location.href ='http://cvernet.host-ed.me/CRM/Main.html';
+       window.location.href ='http://alticrm-cvernet.rhcloud.com/Main.html';
      }  
   });
 
@@ -37,7 +38,7 @@ if (localStorage['auth'] == 'crm_ok')
      }
      else
      {
-       window.location.href ='http://cvernet.host-ed.me/CRM/Main.html';
+       window.location.href ='http://alticrm-cvernet.rhcloud.com/Main.html';
      }
      
     $scope.persons = [];
