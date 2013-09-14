@@ -1,0 +1,11 @@
+MongoDB 2.2 database added.  Please make note of these credentials:
+   Root User:     admin
+   Root Password: nA8tR_dyNKnj
+   Database Name: alticrm
+Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
+
+
+Please make note of these MongoDB credentials again:
+  RockMongo User: admin
+  RockMongo Password: nA8tR_dyNKnj
+URL: https://alticrm-cvernet.rhcloud.com/rockmongo/

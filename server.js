@@ -118,10 +118,10 @@ var SampleApp = function () {
         self.routes['/ws'] = function (req, res) {
 
             var MongoClient = require('mongodb').MongoClient;
-            MongoClient.connect("mongodb://admin:QMh8iiVNvAwP@127.10.136.130:27017/hw", function (err, db) {
+            MongoClient.connect("mongodb://admin:nA8tR_dyNKnj@127.10.136.130:27017/alticrm", function (err, db) {
                 res.end('DB : '+ err);
                 /*
-                var collection = db.collection("CRM");
+                var collection = db.collection("crm_data");
                 collection.find().toArray(function(err, item) {
                     res.write(JSON.stringify(item));
                     res.end();
