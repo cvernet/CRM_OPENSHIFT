@@ -114,6 +114,7 @@ var SampleApp = function () {
             res.write('Ajout dans la base '+req.params.id);
 //insertion dans la base
           MongoClient.connect("mongodb://admin:nA8tR_dyNKnj@127.2.62.130:27017/alticrm", function (err, db) {
+          var collection = db.collection("crm_data");
                 collection.insert(
                 [
                 {
