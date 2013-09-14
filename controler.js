@@ -70,8 +70,10 @@ myApp.controller('CRE_NEED',
 function ($scope, $http, $routeParams) {
   
 $scope.save = function () {  
-//      $http.get('http://alticrm-cvernet.rhcloud.com/insert/'+$scope.id).success(function(data) {      });    
-$scope.id = 123;
+      $http.get('http://alticrm-cvernet.rhcloud.com/insert/'+$scope.id).success(function(data) {      
+      $scope.message('Data saved !');
+      });    
+
 }  
    
   });
