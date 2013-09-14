@@ -110,8 +110,21 @@ var SampleApp = function () {
 //            res.send(self.cache_get('index.html'));
         };
 
-        self.routes['/param/:test'] = function (req, res) {
-            res.send('Param ? '+req.params.test);
+        self.routes['/insert/:id'] = function (req, res) {
+            res.write('Ajout dans la base '+req.params.id);
+//insertion dans la base
+                collection.insert(
+                [
+                {
+                  "FIELD1":req.params.id,
+                }
+                ]
+                
+                , {
+                    w: 1
+                }, function (err, result) {
+                 res.end('Erreur ? ' + err);   
+                    });            
 
         };
 
@@ -121,7 +134,7 @@ var SampleApp = function () {
         };
 
         self.routes['/ws'] = function (req, res) {
-
+//Lit les infos CRM présentes dans la base
             var MongoClient = require('mongodb').MongoClient;
             MongoClient.connect("mongodb://admin:nA8tR_dyNKnj@127.2.62.130:27017/alticrm", function (err, db) {
                 //res.end('DB : '+ err);
