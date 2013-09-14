@@ -5,7 +5,7 @@ var myApp = angular.module('myApp', []).
       when('/rh', {templateUrl: 'v_rh.html',   controller: 'RH'}).
       when('/rh/:id', {templateUrl: 'v_rh.html',   controller: 'RH'}).      
       when('/crm',{templateUrl: 'v_crm.html', controller: 'CRM'}).
-      when('/add_crm',{templateUrl: 'v_add_crm.html', controller: 'ADD_CRM'}).      
+      when('/cre_need',{templateUrl: 'v_create_need.html', controller: 'CRE_NEED'}).      
       when('/auth',{templateUrl: 'v_auth.html', controller: 'AUTH'}).
       otherwise({templateUrl: 'v_auth.html', controller: 'AUTH'});
 }]);
@@ -66,4 +66,11 @@ $scope.check = function () {
    
   });
 
+myApp.controller('CRE_NEED',
+function ($scope, $http, $routeParams) {
+  
+$scope.save = function () {  
+}  
+   
+  });
 
