@@ -110,6 +110,11 @@ var SampleApp = function () {
 //            res.send(self.cache_get('index.html'));
         };
 
+        self.routes['/param/:test'] = function (req, res) {
+            res.send('Param ? '+req.params.test);
+
+        };
+
         self.routes['/main'] = function (req, res) {
             res.setHeader('Content-Type', 'text/html');        
           fs.createReadStream(__dirname+'/Main.html').pipe(res);

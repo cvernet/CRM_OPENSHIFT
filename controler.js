@@ -5,6 +5,7 @@ var myApp = angular.module('myApp', []).
       when('/rh', {templateUrl: 'v_rh.html',   controller: 'RH'}).
       when('/rh/:id', {templateUrl: 'v_rh.html',   controller: 'RH'}).      
       when('/crm',{templateUrl: 'v_crm.html', controller: 'CRM'}).
+      when('/add_crm',{templateUrl: 'v_add_crm.html', controller: 'ADD_CRM'}).      
       when('/auth',{templateUrl: 'v_auth.html', controller: 'AUTH'}).
       otherwise({templateUrl: 'v_auth.html', controller: 'AUTH'});
 }]);
@@ -62,8 +63,13 @@ $scope.check = function () {
   else
   $scope.message = 'Vous n\'avez pas les autorisations.';
 }  
-  
-  
+   
   });
 
-
+myApp.controller('ADD_CRM',
+function ($scope, $http, $routeParams) {
+  
+$scope.save = function () {  
+   
+   
+  });
