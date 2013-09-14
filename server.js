@@ -119,13 +119,14 @@ var SampleApp = function () {
 
             var MongoClient = require('mongodb').MongoClient;
             MongoClient.connect("mongodb://admin:QMh8iiVNvAwP@127.10.136.130:27017/hw", function (err, db) {
-      
+                res.end('DB : '+ err);
+                /*
                 var collection = db.collection("CRM");
                 collection.find().toArray(function(err, item) {
                     res.write(JSON.stringify(item));
                     res.end();
                  });
-  
+                   */
             });
        };
     };
