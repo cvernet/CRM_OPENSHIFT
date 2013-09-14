@@ -111,6 +111,7 @@ var SampleApp = function () {
         };
 
         self.routes['/main'] = function (req, res) {
+            res.setHeader('Content-Type', 'text/html');        
           fs.createReadStream(__dirname+'/Main.html').pipe(res);
         };
 
