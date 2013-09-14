@@ -66,10 +66,4 @@ $scope.check = function () {
    
   });
 
-myApp.controller('ADD_CRM',
-function ($scope, $http, $routeParams) {
-  
-$scope.save = function () {  
-   
-   
-  });
+
