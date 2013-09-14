@@ -4,7 +4,7 @@
       <tbody>             
         <tr>
             <td>Req ID</td>
-            <td><input type="text" class="form-control" placeholder="Req ID"/></td>
+            <td><input type="text" class="form-control" ng-model="id" placeholder="Req ID"/></td>
         </tr>
         <tr>
             <td>Request Raised by (Name)</td>
@@ -24,6 +24,7 @@
         </tr>
       </tbody>         
     </table>        
-<a href="" ng-click="save()" class="btn btn-medium btn-primary"> Go !</a>
+<a href="" ng-click="save()" class="btn btn-medium btn-primary"> Save</a>
+{{id}}
 </form>
 </div>
