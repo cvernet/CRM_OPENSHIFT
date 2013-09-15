@@ -136,6 +136,20 @@ var SampleApp = function () {
           fs.createReadStream(__dirname+'/Main.html').pipe(res);
         };
 
+
+        self.routes['/post'] = function (req, res) {
+               res.write('Method ' + req.method + '\n');
+          
+               req.on('data', function (data) {
+                    res.write('Data ' + data + '\n');
+               });
+               
+               req.on('end',function(){
+                    res.end('end');
+               });
+
+        };
+
         self.routes['/ws'] = function (req, res) {
 //Lit les infos CRM présentes dans la base
             MongoClient.connect("mongodb://admin:nA8tR_dyNKnj@127.2.62.130:27017/alticrm", function (err, db) {
