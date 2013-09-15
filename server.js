@@ -144,9 +144,8 @@ var SampleApp = function () {
                     res.write('Data ' + data + '\n');
                });
                
-               req.on('end',function(){
+
                     res.end('end');
-               });
 
         };
 
