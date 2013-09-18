@@ -71,7 +71,7 @@
 </tr>
 </thead>
 <tbody>
-<tr ng-repeat="need in needs | filter:query | orderBy: 'FIELD9'">  
+<tr ng-repeat="need in needs | filter:query | orderBy: 'FIELD9' | limitTo:100">  
 <td>
 <a href="javascript:window.open('#/rh/{{need.FIELD1}}','popup','resizable=no,scrollbars=yes,location=no,width=1000,height=500,top=200,left=200');">{{need.FIELD1}}</a></td>
 <!-- <td>{{need.FIELD2}}</td>
